@@ -64,7 +64,6 @@ class LazyLoadImage extends React.Component {
 		};
 	}
 
-
 	getImg() {
 		if (!this.state.visible) {
 			// console.log('Lazy::getImg::invisible');
