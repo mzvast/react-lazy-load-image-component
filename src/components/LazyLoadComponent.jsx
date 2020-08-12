@@ -43,10 +43,20 @@ class LazyLoadComponent extends React.Component {
 	}
 
 	onVisible() {
+		// console.log('Lazy::onVisible');
 		this.props.beforeLoad();
 		this.setState({
 			visible: true,
 		});
+	}
+
+	onInvisible() {
+		// console.log('Lazy::onInvisible');
+		if (this.state.visible) {
+			this.setState({
+				visible: false,
+			});
+		}
 	}
 
 	render() {
