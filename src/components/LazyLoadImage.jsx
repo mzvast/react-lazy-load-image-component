@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 
 import LazyLoadComponent from './LazyLoadComponent.jsx';
+import MyImage from './MyImage.jsx';
 
 class LazyLoadImage extends React.Component {
 	constructor(props) {
@@ -65,12 +66,7 @@ class LazyLoadImage extends React.Component {
 	}
 
 	getImg() {
-		if (!this.state.visible) {
-			// console.log('Lazy::getImg::invisible');
-
-			return null;
-		}
-		const {
+		let {
 			afterLoad,
 			beforeLoad,
 			delayMethod,
@@ -86,7 +82,13 @@ class LazyLoadImage extends React.Component {
 			...imgProps
 		} = this.props;
 
-		return <img onLoad={this.onImageLoad()} {...imgProps} />;
+		return (
+			<MyImage
+				onLoad={this.onImageLoad()}
+				imgProps={imgProps}
+				stop={!this.state.visible && !this.state.loaded}
+			/>
+		);
 	}
 
 	getLazyLoadImage() {
