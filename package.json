@@ -1,5 +1,5 @@
 {
-	"name": "react-lazy-load-image-component",
+	"name": "@mzvast/react-lazy-image-abort",
 	"version": "1.4.3",
 	"description": " React Component to lazy load images using a HOC to track window scroll position. ",
 	"main": "build/index.js",
@@ -42,7 +42,9 @@
 		"start": "webpack --watch",
 		"build": "webpack",
 		"prettier": "prettier --write \"**/*.{js,jsx,json}\"",
-		"lint": "eslint src --ext=js,jsx"
+		"lint": "eslint src --ext=js,jsx",
+		"prepublish": "npm run build",
+		"release": "npm publish --access public"
 	},
 	"jest": {
 		"verbose": true,

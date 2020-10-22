@@ -1,3 +1,5 @@
+This repo is fork from [react-lazy-load-image-component)](https://github.com/Aljullu/react-lazy-load-image-component) and add support for aborting image.
+===============================
 <div style="text-align:center;">
   <a href="https://github.com/Aljullu/react-lazy-load-image-component/"><img src="https://user-images.githubusercontent.com/3616980/44358570-afc8ac00-a4b5-11e8-8f7e-1ad9b7038ce5.png" alt="React Lazy Load Image Component Logo" style="width:463px;"/></a>
 </div>
